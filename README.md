@@ -15,33 +15,45 @@ Caman.gradientLinear(pos,main,gmap);
 
 Basic stucture;
 
-**pos** : @string
-**main** : @object
-**gmap** : @listObject
+```
+//main
+main = {
+	blend: '<Caman.Blends>',
+	opacity: <0-100>
+}
+
+//gmap
+gmap = [
+	{
+		color: '<hexWithHashtag>',
+		opacity: <0.0-1.0>
+	},...N
+]
+```
 
 ## Example
 
 ```javascript
 Caman("#tst", function () {
-			gmap = [
-				{
-					color: '#ff0000',
-					opacity: 1
-				},
-				{
-					color: '#123abc',
-					opacity: 1
-				},
-				{
-					color: '#000',
-					opacity: 1
-				}
-			];
-			pos  = "left";
-			main = {blend:'lighten',opacity: 100}
+	gmap = [
+		{
+			color: '#ff0000',
+			opacity: 1
+		},
+		{
+			color: '#123abc',
+			opacity: 1
+		},
+		{
+			color: '#000',
+			opacity: 1
+		}
+	];
+	pos  = "left";
+	main = {blend:'lighten',opacity: 100}
 
-			this.gradientLinear(pos,main,gmap);
+	this.gradientLinear(pos,main,gmap);
 
-			this.render();
-		});
+	this.render();
+});
 ```
