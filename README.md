@@ -33,6 +33,8 @@ gmap = [
 
 ## Example
 
+![CamanJS Linear Gradient Plugin Orginal Image](http://fatihmertdogancan.com/github/camanjs-lineargradient/ben.jpg "CamanJS Linear Gradient Plugin Orginal Image")
+
 ```javascript
 Caman("#tst", function () {
 	gmap = [
@@ -57,3 +59,8 @@ Caman("#tst", function () {
 	this.render();
 });
 ```
+
+Result
+
+
+![CamanJS Linear Gradient Plugin Gradient Affected Image](http://fatihmertdogancan.com/github/camanjs-lineargradient/canvas.png "CamanJS Linear Gradient Plugin Gradient Affected Image")
