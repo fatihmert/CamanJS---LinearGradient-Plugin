@@ -6,55 +6,67 @@ Easy using;
 Caman.gradientLinear(pos,main,gmap);
 ```
 
-| pos           | main          | gmap  |
-| ------------- |:-------------:| -----:|
-| left          | blend         | color |
-| right         | opacity       |opacity|
-| bottom        |               |       |
-| top           |               |       |
-
 Basic stucture;
 
 ```
 //main
 main = {
+	type: 'linear|radial'
 	blend: '<Caman.Blends>',
-	opacity: <0-100>
+	opacity: <0-100>,
+	rotate: 'left|top|right|bottom'|<0-360>
+}
+
+if(main.type = 'radial'){
+	rotate : {
+		innerX: <0-100>,
+		innerY: <0-100>,
+		outerX: <0-100>,
+		outerY: <0-100>
+	}
 }
 
 //gmap
 gmap = [
 	{
 		color: '<hexWithHashtag>',
-		opacity: <0.0-1.0>
+		opacity: <0.0-1.0>|null,
+		location:<0.0-1.0>|null
 	},...N
 ]
 ```
 
 ## Example
 
-![CamanJS Linear Gradient Plugin Orginal Image](http://fatihmertdogancan.com/github/camanjs-lineargradient/ben.jpg "CamanJS Linear Gradient Plugin Orginal Image")
+![CamanJS Gradient Plugin Orginal Image](http://fatihmertdogancan.com/github/camanjs-lineargradient/ben.jpg "CamanJS Gradient Plugin Orginal Image")
 
 ```javascript
 Caman("#tst", function () {
 	gmap = [
 		{
 			color: '#ff0000',
-			opacity: 1
+			opacity: 1,
+			location: null
 		},
 		{
 			color: '#123abc',
-			opacity: 1
+			opacity: 1,
+			location: null
 		},
 		{
 			color: '#000',
-			opacity: 1
+			opacity: 1,
+			location: null
 		}
 	];
-	pos  = "left";
-	main = {blend:'lighten',opacity: 100}
+	main = {
+		type: 'linear',
+		blend:'lighten',
+		opacity: 100, 
+		rotate: 'left'
+	}
 
-	this.gradientLinear(pos,main,gmap);
+	this.gradient(main,gmap);
 
 	this.render();
 });
@@ -63,4 +75,4 @@ Caman("#tst", function () {
 Result
 
 
-![CamanJS Linear Gradient Plugin Gradient Affected Image](http://fatihmertdogancan.com/github/camanjs-lineargradient/canvas.png "CamanJS Linear Gradient Plugin Gradient Affected Image")
+![CamanJS Gradient Plugin Gradient Affected Image](http://fatihmertdogancan.com/github/camanjs-lineargradient/canvas.png "CamanJS Gradient Plugin Gradient Affected Image")
