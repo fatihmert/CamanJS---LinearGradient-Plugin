@@ -1,9 +1,9 @@
-# CamanJS - LinearGradient-Plugin
+# CamanJS - Gradient-Plugin
 
 Easy using;
 
 ```javascript
-Caman.gradientLinear(main,gmap);
+Caman.gradient(main,gmap);
 ```
 
 Basic stucture;
