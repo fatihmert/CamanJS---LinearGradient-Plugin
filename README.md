@@ -3,7 +3,7 @@
 Easy using;
 
 ```javascript
-Caman.gradientLinear(pos,main,gmap);
+Caman.gradientLinear(main,gmap);
 ```
 
 Basic stucture;
